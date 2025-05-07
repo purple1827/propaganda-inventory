@@ -6,8 +6,8 @@ interface PageProps {
   params: { id: string };
 }
 
-export default function ProductDetail(props: PageProps) {
-  const { id } = props.params;
+export default function Page({ params }: PageProps) {
+  const { id } =  params;
   const [user, setUser] = useState<any>(null);
   const [product, setProduct] = useState<any>(null);
 
