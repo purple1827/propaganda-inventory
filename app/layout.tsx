@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FloatingCart from "@/components/FloatingCart";
-// import Navbar from "@/components/Navbar";
+// import  from "@/components/";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ margin: 0, padding: 0 }}
       >
-        {/* <Navbar /> */}
+        {/* < /> */}
         {children}
         <FloatingCart />
       </body>

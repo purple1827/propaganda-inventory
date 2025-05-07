@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-     
+      {/* <Navbar /> */}
       <main
   style={{
     minHeight: "100vh",
@@ -22,7 +22,18 @@ export default function Home() {
     padding: "40px 0",
   }}
 >
-  
+  <h1
+    style={{
+      color: "#fff",
+      textAlign: "center",
+      fontSize: 36,
+      fontWeight: "bold",
+      marginBottom: 40,
+      letterSpacing: 2,
+    }}
+  >
+    宣導品管理系統
+  </h1>
   <div
     style={{
       display: "flex",
@@ -38,7 +49,7 @@ export default function Home() {
         key={item.id}
         style={{
           width: 260,
-          background: "linear-gradient(135deg, rgba(224, 224, 224, 0.52), rgba(185, 180, 180, 0.6))",
+          background: "linear-gradient(135deg, rgba(185, 185, 185, 0.03), rgba(201, 201, 201, 0.6))",
           borderRadius: 18,
           boxShadow: "0 4px 24px #0008",
           padding: 24,
