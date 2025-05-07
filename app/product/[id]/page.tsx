@@ -1,13 +1,8 @@
-"use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-interface PageProps {
-  params: { id: string };
-}
-
-export default function Page({ params }: PageProps) {
-  const { id } =  params;
+export default function Page({ params }: { params: { id: string } }) {
+  const { id } = params;
   const [user, setUser] = useState<any>(null);
   const [product, setProduct] = useState<any>(null);
 
