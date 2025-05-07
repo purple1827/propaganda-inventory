@@ -2,22 +2,27 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function ProductDetail({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: { id: string };
+}
+
+export default function ProductDetail(props: PageProps) {
+  const { id } = props.params;
   const [user, setUser] = useState<any>(null);
   const [product, setProduct] = useState<any>(null);
 
   useEffect(() => {
-    fetch("https://api.sheetbest.com/sheets/1522276e-7c68-4355-9a10-7cda433c7f90")
+    fetch("https://api.sheetbest.com/sheets/你的sheetid")
       .then((res) => res.json())
       .then((data) => {
-        const found = data.find((item: any) => String(item.id) === params.id);
+        const found = data.find((item: any) => String(item.id) === id);
         setProduct(found);
       });
     if (typeof window !== "undefined") {
       const loginUser = localStorage.getItem("loginUser");
       setUser(loginUser ? JSON.parse(loginUser) : null);
     }
-  }, [params.id]);
+  }, [id]);
 
   const handleAddToCart = () => {
     const cart = JSON.parse(localStorage.getItem("applyCart") || "[]");
