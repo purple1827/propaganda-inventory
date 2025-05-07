@@ -2,11 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-type Props = {
-  params: { id: string }
-};
-
-export default function Page(props: Props) {
+export default function Page(props: any) {
   const { id } = props.params;
   const [user, setUser] = useState<any>(null);
   const [product, setProduct] = useState<any>(null);
