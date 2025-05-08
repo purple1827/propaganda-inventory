@@ -92,7 +92,7 @@ export default function Home() {
           目前存放位置：{item["目前存放位置"]}
         </div>
         <a
-          href={/product/${item.id}}
+          href={`/product/${item.id}`}
           style={{
             marginTop: 10,
             padding: "8px 24px",
